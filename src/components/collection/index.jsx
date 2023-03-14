@@ -14,7 +14,11 @@ const Collection = () => {
         isTop,
         chooseSweatshirt,
         chooseTop,
-        handleActive
+        handleActive,
+        button,
+        setButton,
+        changeSize,
+        btnStyle
     } = useCollection()
 
     return (
@@ -36,10 +40,15 @@ const Collection = () => {
             </div>
             <div className={"information"}>
                 <div className={"sizes"}>
-                    <p> Размер: <span>XS (44)</span></p>
-                    <button className={"size-xs size"}>XS</button>
-                    <button className={"size"}>S</button>
-                    <button className={"size"}>M</button>
+                    <p> Размер: <span>{button}</span></p>
+                    <button className={"size"}
+                            onClick={()=>{changeSize(setButton("XS"))}}
+                    >XS</button>
+                    <button className={"size"}
+                            onClick={()=>{changeSize(setButton("S"))}}
+                    >S</button>
+                    <button className={"size"}   onClick={()=>{changeSize(setButton("M"))}}>
+                        M</button>
 
                 </div>
 

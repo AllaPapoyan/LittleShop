@@ -142,11 +142,15 @@ const UseCollection = () => {
     const [set, setSet] = useState(true)
     const [sweatshirt, setSweatshirt] = useState(false)
     const [isTop, setTop] = useState(true)
-
+    const [button,setButton]=useState('XS')
+    const [btnStyle,setBtnStyle]=useState(false)
     useEffect(() => {
         setActive([isData[0]])
     }, [isData])
 
+    const changeSize=()=>{
+       setBtnStyle(!btnStyle)
+    }
     const changeColor = (color) => {
         if (color === "black") {
             setColor(true)
@@ -219,7 +223,11 @@ const UseCollection = () => {
         sweatshirt,
         chooseSweatshirt,
         chooseTop,
-        handleActive
+        handleActive,
+        changeSize,
+        button,
+        setButton,
+        btnStyle
     }
 }
 export default UseCollection
