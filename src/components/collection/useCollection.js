@@ -209,7 +209,7 @@ const UseCollection = () => {
             } else {
                 setData(data.filter(el => el.type === "top" && el.color === "white"))
                 setIsSetName("Брюки + Топ")
-                setIsPrice("3 540 РУБ.")
+                setIsPrice("3 470 РУБ.")
 
 
 
