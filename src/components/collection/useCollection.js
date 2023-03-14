@@ -203,13 +203,13 @@ const UseCollection = () => {
             if (color === 'black') {
                 setData(data.filter(el => el.type === "top" && el.color === "black"))
                 setIsSetName("Брюки + Топ")
-                setIsPrice("ИТОГО: 3 470 РУБ.")
+                setIsPrice(" 3 470 РУБ.")
 
 
             } else {
                 setData(data.filter(el => el.type === "top" && el.color === "white"))
                 setIsSetName("Брюки + Топ")
-                setIsPrice("ИТОГО: 3 540 РУБ.")
+                setIsPrice("3 540 РУБ.")
 
 
 
