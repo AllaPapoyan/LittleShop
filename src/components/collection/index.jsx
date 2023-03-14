@@ -20,7 +20,8 @@ const Collection = () => {
         changeSize,
         btnStyle,
         colorName,
-        isSetName
+        isSetName,
+        isPrice,
     } = useCollection()
 
     return (
@@ -95,7 +96,7 @@ const Collection = () => {
                 </div>
 
                 <div className={"last-part"}>
-                    <p>ИТОГО:<span>3 470 РУБ.</span></p>
+                    <p>ИТОГО: <span>{isPrice}</span></p>
 
                     <button className={"btn"}>Оформить заказ</button>
                 </div>

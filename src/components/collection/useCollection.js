@@ -146,6 +146,7 @@ const UseCollection = () => {
     const [btnStyle,setBtnStyle]=useState(false)
     const [colorName,setColorName]=useState("Белый")
     const [isSetName,setIsSetName]=useState("Брюки + Топ")
+    const [isPrice,setIsPrice]=useState("3 470 РУБ.")
     useEffect(() => {
         setActive([isData[0]])
     }, [isData])
@@ -187,10 +188,13 @@ const UseCollection = () => {
             if (color === 'black') {
                 setData(data.filter(el => el.type === "sweatshirt" && el.color === "black"))
                 setIsSetName("Брюки + Свитшот")
+                setIsPrice("3 570 РУБ.")
 
             } else {
                 setData(data.filter(el => el.type === "sweatshirt" && el.color === "white"))
                 setIsSetName("Брюки + Свитшот")
+                setIsPrice("3 570 РУБ.")
+
 
 
             }
@@ -199,10 +203,14 @@ const UseCollection = () => {
             if (color === 'black') {
                 setData(data.filter(el => el.type === "top" && el.color === "black"))
                 setIsSetName("Брюки + Топ")
+                setIsPrice("ИТОГО: 3 470 РУБ.")
+
 
             } else {
                 setData(data.filter(el => el.type === "top" && el.color === "white"))
                 setIsSetName("Брюки + Топ")
+                setIsPrice("ИТОГО: 3 540 РУБ.")
+
 
 
             }
@@ -243,7 +251,8 @@ const UseCollection = () => {
         button,
         setButton,
         btnStyle,colorName,
-        isSetName
+        isSetName,
+        isPrice,
     }
 }
 export default UseCollection
