@@ -144,6 +144,8 @@ const UseCollection = () => {
     const [isTop, setTop] = useState(true)
     const [button,setButton]=useState('XS')
     const [btnStyle,setBtnStyle]=useState(false)
+    const [colorName,setColorName]=useState("Белый")
+    const [isSetName,setIsSetName]=useState("Брюки + Топ")
     useEffect(() => {
         setActive([isData[0]])
     }, [isData])
@@ -154,11 +156,15 @@ const UseCollection = () => {
     const changeColor = (color) => {
         if (color === "black") {
             setColor(true)
+            setColorName("Черный")
             if (isTop) {
                 changeItems("top", "black")
+                // setIsSetName("Брюки + Топ")
             }
             if (sweatshirt) {
                 changeItems("sweatshirt", "black")
+                // setIsSetName("Брюки + Свитшот")
+
             }
 
         }
@@ -166,9 +172,12 @@ const UseCollection = () => {
             setColor(false)
             if (isTop) {
                 changeItems("top", "white")
+                // setIsSetName("Брюки + Топ")
             }
             if (sweatshirt) {
                 changeItems("sweatshirt", "white")
+                // setIsSetName("Брюки + Свитшот")
+
             }
         }
     }
@@ -177,18 +186,24 @@ const UseCollection = () => {
         if (item === "sweatshirt") {
             if (color === 'black') {
                 setData(data.filter(el => el.type === "sweatshirt" && el.color === "black"))
+                setIsSetName("Брюки + Свитшот")
 
             } else {
                 setData(data.filter(el => el.type === "sweatshirt" && el.color === "white"))
+                setIsSetName("Брюки + Свитшот")
+
 
             }
         }
         if (item === "top") {
             if (color === 'black') {
                 setData(data.filter(el => el.type === "top" && el.color === "black"))
+                setIsSetName("Брюки + Топ")
 
             } else {
                 setData(data.filter(el => el.type === "top" && el.color === "white"))
+                setIsSetName("Брюки + Топ")
+
 
             }
         }
@@ -227,7 +242,8 @@ const UseCollection = () => {
         changeSize,
         button,
         setButton,
-        btnStyle
+        btnStyle,colorName,
+        isSetName
     }
 }
 export default UseCollection

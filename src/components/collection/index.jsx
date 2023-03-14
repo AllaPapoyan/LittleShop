@@ -18,7 +18,9 @@ const Collection = () => {
         button,
         setButton,
         changeSize,
-        btnStyle
+        btnStyle,
+        colorName,
+        isSetName
     } = useCollection()
 
     return (
@@ -53,7 +55,7 @@ const Collection = () => {
                 </div>
 
                 <div className={"colors"}>
-                    <p>Цвет: <span></span></p>
+                    <p>Цвет: <span>{colorName}</span></p>
                     {/*<input type={"radio"} className={"color"}/>*/}
                     {/*<input type={"radio"} className={"color"}/>*/}
                     <button className={"color black"}
@@ -67,7 +69,7 @@ const Collection = () => {
                 </div>
 
                 <div className={"set"}>
-                    <p>Комплект: <span></span></p>
+                    <p>Комплект: <span>{isSetName}</span></p>
                     <div style={{display: "flex", alignItems: "center", gap: "10px"}}>
                         <button className={"part"}
                                 onClick={() => chooseTop()}>
